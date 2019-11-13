@@ -1,0 +1,32 @@
+-if (!$page->isMobile() || $page->isTablet()):
+    // Desktop video and poster
+    .hero-video-wrapper.desktop-hero-video-wrapper
+        //- safari must be muted to autoplay, ref https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
+        video#hero-video.hero-video(
+                autoplay="autoplay" 
+                muted="muted"
+                loop="loop"
+                preload="auto"
+                playsinline="playsinline"
+                src="<?= $page->hero_desktop_video() ?>"
+                poster="<?= $page->hero_desktop_video_poster()->toFile()->url() ?>"
+            )
+-else:
+    // Mobile Video and Poster
+    //- if use .mobile-video-banner-wrapper here, will hide on ipad!!!!
+    .hero-video-wrapper
+        video#hero-video.hero-video(
+            autoplay="autoplay" 
+            muted="muted"
+            loop="loop"
+            preload="auto"
+            playsinline="playsinline"
+            src="<?= $page->hero_mobile_video() ?>"
+            poster="<?= $page->hero_mobile_video_poster()->toFile()->url() ?>"
+        )
+-endif
+
+//- // Hero Copy
+//- .hero-copy
+    .hero-text!= $page->text()->kirbytextinline()
+    .hero-tagline!= $page->tagline()->kirbytextinline()->widont()
