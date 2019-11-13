@@ -13,3 +13,8 @@
         //- use transparent svg as 16/9 ratio placeholder instead of 56.35% padding, so image can also have a max height of 100% for more landscape screens
         //- from https://stackoverflow.com/a/39866013/4504073
         img.video-ratio-svg(src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201%201%22%20width%3D%221%22%20height%3D%221%22%2F%3E" style="width: 100%;" alt="video placeholder")
+
+
+//- inject JS for speed and b/c so small
+script.
+    -include('/media/plugins/visualdialogue/herovideo/js/herovideo.js')

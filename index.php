@@ -26,13 +26,13 @@ namespace visualdialogue\HeroVideo;
     ],
 
     'snippets' => [
-        'herovideoajax'              => __DIR__ . '/src/snippets/herovideoajax.php',
-        'herovideowrapper'              => __DIR__ . '/src/snippets/herovideowrapper.php',
+        'herovideoajax'             => __DIR__ . '/src/snippets/herovideoajax.php',
+        'herovideowrapper'          => __DIR__ . '/src/snippets/herovideowrapper.php',
     ],
 
     'templates' => [
         // as template too so can get json as content representation easily
-        'herovideoajax.json'       => __DIR__ . '/src/templates/herovideoajax.json.php',
+        'herovideoajax.json'        => __DIR__ . '/src/templates/herovideoajax.json.php',
     ]
 
 ]);
